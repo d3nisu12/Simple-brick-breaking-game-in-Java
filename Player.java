@@ -55,13 +55,13 @@ public class Player {
         if(playerX+playerWidth >= gp.screenWidth){
             canMoveRight = false;  
         }else{
-            canMoveLeft = true;
+            canMoveRight = true;
         }
 
         if(playerX <= 0){
             canMoveLeft = false;
         }else{
-            canMoveRight = true;
+            canMoveLeft = true;
         }
     }
 
