@@ -74,6 +74,10 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void update(){
+
+        if(keyH.resetPressed){
+            resetGame();
+        }
        player.update();
        ball.update();
        colHandler.checkForCollision();
@@ -90,5 +94,10 @@ public class GamePanel extends JPanel implements Runnable {
         ball.draw(g2);
 
         g2.dispose();
+    }
+
+    private void resetGame(){
+        ball.resetBall();
+        bricks.resetMap(); 
     }
 }
