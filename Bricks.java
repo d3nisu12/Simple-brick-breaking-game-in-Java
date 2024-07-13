@@ -62,5 +62,8 @@ public class Bricks {
         return true;
     }
 
+    public void resetMap(){
+        buildArray();
+    }
 
 }

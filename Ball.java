@@ -40,6 +40,10 @@ public class Ball {
         yPos+=speed*yDirection;
     }
 
+    public void resetBall(){
+        setDefaultValues();
+    }
+
     public int getXpos(){
         return xPos;
     }

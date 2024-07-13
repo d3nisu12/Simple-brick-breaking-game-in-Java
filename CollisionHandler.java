@@ -18,6 +18,14 @@ public class CollisionHandler {
         checkBallBrickCollision();
         checkBallPlayerCollision();
         checkBallScreenBoundsCollision();
+        checkBallOffScreen();
+    }
+
+    private void checkBallOffScreen(){
+        if(ball.yPos>= gp.getHeight()){
+            ball.resetBall();
+            bricks.resetMap();
+        }
     }
 
     private void checkBallScreenBoundsCollision(){
