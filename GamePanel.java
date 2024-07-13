@@ -23,7 +23,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     Player player = new Player(this,keyH);
 
-    Bricks bricks = new Bricks(this, player);
+    Bricks bricks = new Bricks(player);
 
     Ball ball = new Ball(this);
 

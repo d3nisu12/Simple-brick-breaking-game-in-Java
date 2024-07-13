@@ -1,9 +1,12 @@
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.util.Random;
 
 public class Ball {
     
     GamePanel gp;
+
+    Random rand = new Random();
 
     public final int radius = 5;
     public final int diameter = radius * 2;
@@ -26,7 +29,7 @@ public class Ball {
         xPos = gp.screenWidth/2 -radius;
         yPos = gp.screenHeight/2 -radius;
         speed = 2;
-        xDirection = 1;
+        xDirection = rand.nextBoolean() ? 1:-1;
         yDirection = 1;
     }
 
