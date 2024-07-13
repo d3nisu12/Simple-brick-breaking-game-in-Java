@@ -4,7 +4,6 @@ import java.awt.Graphics2D;
 
 public class Bricks {
     
-    GamePanel gp;
     Player player;
 
     public final int sizeX = 70;
@@ -15,8 +14,7 @@ public class Bricks {
 
     public int map[][];
 
-    public Bricks(GamePanel gp, Player player){
-        this.gp=gp;
+    public Bricks(Player player){
         this.player = player;
 
         buildArray();
