@@ -6,12 +6,14 @@ public class CollisionHandler {
     Bricks bricks;
     Ball ball;
     GamePanel gp;
+    Score sc;
 
-    CollisionHandler(Player player, Bricks bricks, Ball ball,GamePanel gp){
+    CollisionHandler(Player player, Bricks bricks, Ball ball,GamePanel gp, Score sc){
         this.player = player;
         this.bricks = bricks;
         this.ball = ball;
         this.gp = gp;
+        this.sc = sc;
     }
 
     public void checkForCollision(){
@@ -61,6 +63,7 @@ public class CollisionHandler {
                     Rectangle brickRect = new Rectangle(brickX, brickY, brickWidth, brickHeight);
 
                     if (ballRect.intersects(brickRect)) {
+                        sc.increaseScore();
                         bricks.setBrickValue(0, i, j);
 
                         if (ball.getXpos() + ball.diameter - 1 <= brickRect.x || ball.getXpos() + 1 >= brickRect.x + brickRect.width) {

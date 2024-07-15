@@ -27,7 +27,9 @@ public class GamePanel extends JPanel implements Runnable {
 
     Ball ball = new Ball(this);
 
-    CollisionHandler colHandler = new CollisionHandler(player, bricks, ball,this);
+    Score score = new Score();
+
+    CollisionHandler colHandler = new CollisionHandler(player, bricks, ball,this, score);
 
     public GamePanel(){
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
@@ -92,6 +94,7 @@ public class GamePanel extends JPanel implements Runnable {
         player.draw(g2);
         bricks.draw(g2);
         ball.draw(g2);
+        score.draw(g2);
 
         g2.dispose();
     }
