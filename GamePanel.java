@@ -102,5 +102,6 @@ public class GamePanel extends JPanel implements Runnable {
     private void resetGame(){
         ball.resetBall();
         bricks.resetMap(); 
+        score.resetScore();
     }
 }

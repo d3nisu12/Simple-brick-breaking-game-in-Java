@@ -15,6 +15,10 @@ public class Score {
         score = 0;
     }
 
+    public void resetScore(){
+        initializeVariables();
+    }
+
     public void increaseScore(){
         score+=5;
     }

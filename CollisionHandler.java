@@ -27,6 +27,7 @@ public class CollisionHandler {
         if(ball.yPos>= gp.getHeight()){
             ball.resetBall();
             bricks.resetMap();
+            sc.resetScore();
         }
     }
 
